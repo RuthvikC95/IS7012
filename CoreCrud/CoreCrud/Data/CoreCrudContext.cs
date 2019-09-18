@@ -17,5 +17,6 @@ namespace CoreCrud.Models
         public DbSet<CoreCrud.Models.Destination> Destination { get; set; }
 
         public DbSet<CoreCrud.Models.Country> Country { get; set; }
+        public object Countries { get; internal set; }
     }
 }

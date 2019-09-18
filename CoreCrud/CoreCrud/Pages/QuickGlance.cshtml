@@ -1,0 +1,34 @@
+﻿@page
+@model CoreCrud.Pages.QuickGlance
+@{
+    ViewData["Title"] = "QuickGlance";
+}
+
+<h1>QuickGlance</h1>
+
+<table class="table table-bordered table-striped">
+    <thead>
+        <tr>
+            <td><strong>Holiday Destinations (Filtered for Booking Available & Ordered by price)</strong></td>
+            
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var Destination in Model.Destinations.OrderBy(x => x.Travel_Cost))
+        {
+            @if (@Destination.isAvailable)
+            {
+
+
+            <tr>
+                <td>
+                    <strong>@Destination.Destination_Name</strong> |
+                    @Destination.Location.Country_Name | @Destination.Travel_Cost
+            </tr>
+                }
+            }
+    </tbody>
+
+
+</table>
+

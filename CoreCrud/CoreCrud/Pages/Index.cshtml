@@ -4,11 +4,40 @@
     ViewData["Title"] = "Home page";
 }
 
-<div class="text-center">
-    <h2 class="display-4">Welcome to Bearcat Holidays!</h2>
-    <p>
-        This web application lists the upcoming tours organized by the company.
-        The "Destination" page allows the employees / admins to Create, Read, Update and Delete the details of the tours. And, the "Countries" page which is linked to the "Destination" page lists all the countries that the company operates in.
-    </p>
-    <img src="https://travelleaderscorporate.com/wp-content/uploads/sites/94/2018/07/travel-agent.jpg" alt="Home_page" style="width:800px;height:500px;">
-</div>
+    <div class="text-center">
+        <h2 class="display-4">Welcome to Bearcat Holidays!</h2>
+        <p>
+            This web application lists the upcoming tours organized by the company.
+            The "Destination" page allows the employees / admins to Create, Read, Update and Delete the details of the tours. And, the "Countries" page which is linked to the "Destination" page lists all the countries that the company operates in. <br />
+            
+            <p> Please click on QuickGlance option above for a summary of the Avaiable Bookings! </p>
+        </p>
+
+        <table class="table table-bordered table-striped">
+            <thead><tr><td>Sample URLs to Country Profiles</td>
+            <tbody>
+                <tr><td><a href="/CountryProfile?Id=1">Country 1</a></td>
+                <tr><td><a href="/CountryProfile?Id=3">Country 3</a></td>
+                <tr><td><a href="/CountryProfile?Id=5">Country 5</a></td>
+            </tbody>
+        </table>
+
+       
+
+        <br />
+
+        <table class="table table-bordered table-striped">
+            <thead><tr><td>Statistics</td><td>Count</td></tr></thead>
+            <tbody>
+                <tr><td>Total Number of Countries </a></td><td> @Model.Country_Count </td></tr>
+                <tr><td>Total Number of Destinations </a> </td> <td> @Model.Destination_Count</td> </tr>
+                <tr><td>Total Number of Bookings Closed</td><td>@Model.Closed_Bookings</td></tr>
+                <tr><td>Total Number of Bookings Available</td><td>@Model.Available_Bookings</td></tr>
+
+        </table>
+
+
+        <img src="https://travelleaderscorporate.com/wp-content/uploads/sites/94/2018/07/travel-agent.jpg" alt="Home_page" style="width:800px;height:500px;">
+
+
+    </div>

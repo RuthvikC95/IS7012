@@ -1,0 +1,56 @@
+﻿@page
+@model CoreCrud.Pages.CountryProfileModel
+@{
+    ViewData["Title"] = "CountryProfile";
+}
+
+<h1>CountryProfile</h1>
+<hr />
+<table class="table table-bordered table-striped">
+    <thead>
+        <tr>
+            <td>Country</td>
+            <td>Destination</td>
+            <td>Travel Date</td>
+            <td>Travel Duration (in days)</td>
+            <td>Booking Available</td>
+            <td>Comments</td>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var destination in Model.country.Destinations)
+        {
+        <tr>
+            <td>@Model.country.Country_Name</td>
+            <td>@destination.Destination_Name</td>
+
+            <td>@destination.Travel_Date</td>
+            <td>@destination.Duration</td>
+            <td>
+                @if (@destination.isAvailable)
+                {
+                    <span>YES</span>
+                }
+                else
+                { <span>NO</span>}
+            </td>
+            <td>
+                @if (@destination.bestprice)
+                {
+                    <span>Best Price</span>
+                }
+                else
+                { <span> Price Negotiable </span>}
+
+            </td>
+
+        </tr>
+        }
+    </tbody>
+
+
+</table>
+
+</ol>
+
+

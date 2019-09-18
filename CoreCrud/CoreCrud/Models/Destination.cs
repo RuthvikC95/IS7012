@@ -28,6 +28,12 @@ namespace CoreCrud.Models
         [Display(Name = "Booking Available?")]
         public bool isAvailable { get; set; }
 
+        //[NotMapped]
+        public bool bestprice
+        {
+            get { return (Travel_Cost < 2000);}
+        }
+
        
 
         
