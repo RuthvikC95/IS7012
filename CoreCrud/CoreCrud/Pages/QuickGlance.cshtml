@@ -4,31 +4,64 @@
     ViewData["Title"] = "QuickGlance";
 }
 
-<h1>QuickGlance</h1>
+<h1>Quick Glance</h1>
+<div class="row">
+    <div class="col-md-7">
+        <table class="table table-bordered table-striped">
+            <thead>
+                <tr>
+                    <td><strong>Holiday Destinations (Filtered for Booking Available & Ordered by price)</strong></td>
 
-<table class="table table-bordered table-striped">
-    <thead>
-        <tr>
-            <td><strong>Holiday Destinations (Filtered for Booking Available & Ordered by price)</strong></td>
-            
-        </tr>
-    </thead>
-    <tbody>
-        @foreach (var Destination in Model.Destinations.OrderBy(x => x.Travel_Cost))
-        {
-            @if (@Destination.isAvailable)
-            {
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var Destination in Model.Destinations.OrderBy(x => x.Travel_Cost))
+                {
+                    @if (@Destination.isAvailable)
+                    {
 
 
+                        <tr>
+                            <td>
+                                <strong>@Destination.Destination_Name</strong> |
+                                @Destination.Location.Country_Name | @Destination.Travel_Cost
+                        </tr>
+                    }
+                }
+            </tbody>
+
+
+        </table>
+
+    </div>
+    <div class="col-md-5">
+        <table>
             <tr>
                 <td>
-                    <strong>@Destination.Destination_Name</strong> |
-                    @Destination.Location.Country_Name | @Destination.Travel_Cost
+                    <img src="https://dragonflytraveller.co.uk/sites/default/files/new%20york.jpg" alt="holidays!!" width="135%" style="height:18%;" />
+                </td>
             </tr>
-                }
-            }
-    </tbody>
+            <tr>
+                <td>
+                </td>
+                <td>
+                    <img src="https://seoimgak.mmtcdn.com/blog/sites/default/files/images/holiday-destinations-for-families-dubai.jpg" alt="Holidays" width="230%" style="height:35%;" />
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <img src="https://images.thrillophilia.com/image/upload/s--qCO95ztQ--/c_fill,f_auto,fl_strip_profile,h_775,q_auto,w_1600/v1/images/photos/000/029/800/original/1512035243_Ladakh-Home.jpg.jpg?1512035237" alt="holidays!!" width="135%" style="height:25%;" />
+                </td>
+            </tr>
+            <tr>
+                <td>
+
+            </tr>
+        </table>
 
 
-</table>
+
+    </div>
+</div>
+
 

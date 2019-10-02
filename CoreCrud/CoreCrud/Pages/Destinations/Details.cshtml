@@ -5,10 +5,10 @@
     ViewData["Title"] = "Details";
 }
 
-<h1>Details</h1>
+<h1>Destination Information</h1>
 
 <div>
-    <h4>Destination</h4>
+    
     <hr />
     <dl class="row">
         <dt class="col-sm-2">
@@ -21,7 +21,7 @@
             @Html.DisplayNameFor(model => model.Destination.Location)
         </dt>
         <dd class="col-sm-10">
-            @Html.DisplayFor(model => model.Destination.Location.Id)
+            @Html.DisplayFor(model => model.Destination.Location.Country_Name)
         </dd>
         <dt class="col-sm-2">
             @Html.DisplayNameFor(model => model.Destination.Travel_Date)
