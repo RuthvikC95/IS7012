@@ -13,7 +13,7 @@ namespace CoreCrud.Pages
     {
         private CoreCrudContext _context;
 
-        public ICollection<Destination> Destinations { get; set; }
+        public ICollection<Destination> Destinations { get; set; }  
         public QuickGlance(CoreCrudContext context)
         {
             _context = context;
